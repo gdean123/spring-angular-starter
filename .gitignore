@@ -1,0 +1,19 @@
+/out
+/node_modules/
+/target/
+/build/
+.idea/workspace.xml
+.idea/libraries
+.gradle/
+/tmp/
+.sass-cache/
+/.bundle/
+/src/main/resources/public/gen
+/src/main/resources/public/style_guide
+/src/main/resources/public/bower_components
+!.idea/					            # Un-ignore .idea directory
+.idea/*					            # Ignore all files in .idea
+!.idea/runConfigurations/		# Except for runConfigurations
+*.iml
+*.ipr
+*.iws
