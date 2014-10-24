@@ -1,0 +1,1 @@
+springAngularStarter = angular.module('springAngularStarter', ['ngRoute', 'templates']);

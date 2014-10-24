@@ -1,0 +1,8 @@
+- vendor/angular/angular.js
+- vendor/angular-route/angular-route.js
+- config/modules.js
+- config/routes.js
+- factories/*
+- repositories/*
+- controllers/*
+- compiled_templates/*
