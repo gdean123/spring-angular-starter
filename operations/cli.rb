@@ -1,6 +1,7 @@
 require 'yaml'
 require_relative 'javascript'
 require_relative 'templates'
+require_relative 'test_server'
 
 class CLI < Thor
   desc 'server', 'run a development server'
@@ -10,7 +11,9 @@ class CLI < Thor
 
   desc 'tests', 'run all tests'
   def tests
+    test_server.start
     system 'rspec src/test/journeys/*'
+    test_server.stop
   end
 
   desc 'compile_js', 'compile all javascripts and templates into a single file'
@@ -18,5 +21,11 @@ class CLI < Thor
     Templates.compile
     Javascript.compile
     Templates.clean
+  end
+
+  private
+
+  def test_server
+    @test_server ||= TestServer.new
   end
 end
