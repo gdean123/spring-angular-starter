@@ -8,6 +8,11 @@ class CLI < Thor
     system './gradlew clean build bootRun'
   end
 
+  desc 'tests', 'run all tests'
+  def tests
+    system 'rspec src/test/journeys/*'
+  end
+
   desc 'compile_js', 'compile all javascripts and templates into a single file'
   def compile_js
     Templates.compile
