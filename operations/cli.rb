@@ -11,6 +11,7 @@ class CLI < Thor
 
   desc 'tests', 'run all tests'
   def tests
+    # system './node_modules/karma/bin/karma start ./src/test/javascript/config/karma.conf.js'
     test_server.start
     system 'rspec src/test/journeys/*'
     test_server.stop
